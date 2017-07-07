@@ -43,35 +43,18 @@ stripfunction<-function( y, x,xlim,ylim,jitterval=NULL,add=F,at=NULL,pointcol,
   if(add==T){
     if(is.null(jitterval)){
       
-      # plot(x,y, xlim = xlim,ylim = ylim,type="n",...)
       points(x,y, xlim = xlim,ylim = ylim,xaxt="n",yaxt="n",xlab="",ylab="",col=pointcol,...)
-      # axis(1,at=at,labels=xaxis.labels,tick=tick,cex.axis=cex.axis,...)
-      # axis(2,at=yaxis.ticks,tick=tick,cex.axis=cex.axis,...)
-      # mtext(side=1,line=line,text=xlabs,cex=cex.axis,adj=c(0.5,NA),...)
-      # mtext(side=2,line=line,text=ylabs,cex=cex.axis,adj=c(0.5,NA),...)
-      # segments(x0=xlim[1],x1=xlim[2],y0=ylim[1])
-      # text(y=xaxis.pos,x=sapply(1:length(xaxis.labels),function(i)xaxis.xpos[i]),
-      #      labels=sapply(1:length(xaxis.labels),function(i)xaxis.labels[i]),cex=cex.axis,adj=c(0.5,NA),...)
-      
+
     }else{
       
-      # plot(y~jitter(x,jitterval) ,xlim = xlim,ylim = ylim,type="n",...)
       points(y~jitter(x,jitterval), xlim = xlim,ylim = ylim,xaxt="n",yaxt="n",xlab="",ylab="",col=pointcol,...)
-      # axis(1,at=at,labels=xaxis.labels,tick=tick,cex.axis=cex.axis,...)
-      # axis(2,at=yaxis.ticks,tick=tick,cex.axis=cex.axis,...)
-      # mtext(side=1,line=line,text=xlabs,cex=cex.axis,adj=c(0.5,NA),...)
-      # mtext(side=2,line=line,text=ylabs,cex=cex.axis,adj=c(0.5,NA),...)
-      # segments(x0=xlim[1],x1=xlim[2],y0=ylim[1])
-      # text(y=xaxis.pos,x=sapply(1:length(xaxis.labels),function(i)xaxis.xpos[i]),
-      #      labels=sapply(1:length(xaxis.labels),function(i)xaxis.labels[i]),cex=cex.axis,adj=c(0.5,NA),...)
-      
+
     }
     
   }else{
     if(is.null(jitterval)){
       
       plot(x,y, xlim = xlim,ylim = ylim,type="p",xaxt="n",yaxt="n",xlab="",ylab="",col=pointcol,...)
-      # axis(1,at=at,labels=xaxis.labels,tick=tick,cex.axis=cex.axis,...)
       axis(2,at=yaxis.ticks,tick=tick,cex.axis=cex.axis,...)
       mtext(side=1,line=line,text=xlabs,cex=cex.axis,adj=c(0.5,NA),...)
       mtext(side=2,line=line,text=ylabs,cex=cex.axis,adj=c(0.5,NA),...)
@@ -82,7 +65,6 @@ stripfunction<-function( y, x,xlim,ylim,jitterval=NULL,add=F,at=NULL,pointcol,
     }else{
       
       plot(y~jitter(x,jitterval) ,xlim = xlim,ylim = ylim,type="p",xaxt="n",yaxt="n",xlab="",ylab="",col=pointcol,...)
-      # axis(1,at=at,labels=xaxis.labels,tick=tick,cex.axis=cex.axis,...)
       axis(2,at=yaxis.ticks,tick=tick,cex.axis=cex.axis,...)
       mtext(side=1,line=line,text=xlabs,cex=cex.axis,adj=c(0.5,NA),...)
       mtext(side=2,line=line,text=ylabs,cex=cex.axis,adj=c(0.5,NA),...)
