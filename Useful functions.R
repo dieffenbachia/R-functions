@@ -77,3 +77,9 @@ stripfunction<-function( y, x,xlim,ylim,jitterval=NULL,add=F,at=NULL,pointcol,
   }
 }
 
+##summarizes object x across strata groupby. x maybe be a dataframe 
+# variable e.g. data$col1 and groupby another dataframe variable e.g. data$col2
+summ<-function(x,groupby,FUN,...){
+  sapply(split(x,groupby),FUN,...)
+}
+
