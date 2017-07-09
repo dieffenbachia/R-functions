@@ -8,7 +8,7 @@
 
 
 #creates strip plots
-stripfunction<-function( y, x,xlim,ylim,jitterval=NULL,add=F,at=NULL,pointcol,
+stripfunction<-function( y, x,xlim,ylim,jitterval=NULL,add=F,at=NULL,pointcol="black",
                          tick=T,cex.axis,xlabs,ylabs,xaxis.pos,yaxis.pos,xaxis.labels,
                          xaxis.xpos,yaxis.ticks,line,...){
   
